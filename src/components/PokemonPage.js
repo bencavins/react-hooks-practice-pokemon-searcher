@@ -8,6 +8,7 @@ function PokemonPage() {
   const [pkList, setPkList] = useState([])
   const [searchQuery, setSearchQuery] = useState("")
 
+
   useEffect(() => {
     fetch('http://localhost:3001/pokemon')
       .then(resp => resp.json())
@@ -18,7 +19,8 @@ function PokemonPage() {
     <Container>
       <h1>Pokemon Searcher</h1>
       <br />
-      <PokemonForm />
+      <PokemonForm
+        setPkList={setPkList} />
       <br />
       <Search
         searchQuery={searchQuery}
