@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <PokemonPage pokemonArray={pokemon} />
+      <PokemonPage pokemonArray={pokemon} setPokemon={setPokemon} />
     </div>
   );
 }
